@@ -1,0 +1,147 @@
+:root{
+  --Lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Lighgrayishviolet: hsl(270, 3%, 87%);
+  --Dargrayisviolet: hsl(279, 6%, 55%);
+  --Verdarviolet: hsl(278, 68%, 11%);
+}
+
+body {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.15;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.main {
+  background-color: blue;
+  max-width: 1440px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.side__color {
+  background-image: url(./assets/images/bg-main-desktop.png);
+  background-size: 100% 100%;
+  height: 100vh;
+  min-width: 350px;
+}
+
+.side__body {
+  background-color: var(--White);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 10%;
+}
+
+.side__body__form {
+  display: flex;
+  flex-direction: column;
+  max-width: 24rem;
+}
+
+.form {
+  text-transform: uppercase;
+  margin: auto;
+  max-width: 24rem;
+  padding: 1rem;
+}
+
+.group,
+.group-button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.group input {
+  width: 100%;
+  border: 1px solid var(--Dargrayisviolet);
+  border-radius: 7px;
+  padding: .8rem;
+  font-size: 14px;
+}
+.group label {
+  margin-bottom: 16px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  color: var(--Verdarviolet);
+  font-size: 15px;
+}
+
+.d-flex {
+  display: flex;
+  gap: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 1.6rem;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.input-button {
+  background-color: var(--Verdarviolet);
+  color: var(--White)
+}
+
+.card__back,
+.card__face {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  left: 3rem;
+  top: 12%;
+  width: 28rem;
+  height: 15.5rem;
+  border-radius: 10px;
+  background-image: url('./assets/images/bg-card-front.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transform: scale(.85);
+}
+
+.card__back {
+  bottom: 12%;
+  top: inherit;
+  left: 8rem;
+  background-image: url('./assets/images/bg-card-back.png');
+}
